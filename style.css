@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&display=swap');
+
+/* RESET AND DARK THEME GROUNDWORK */
+
+* {
+  margin: 0;
+  padding: 0;
+  color: #ddd;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: cyan;
+  color: #222;
+}
+
+body {
+  height: 100vh;
+  background: top/cover url(https://cdn.discordapp.com/attachments/991568376528908299/994111205377589278/streaks_t_cyan.jpg);
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #444;
+  border-radius: 9px;
+  box-shadow: 0 0 2vh .5vh #000a;
+  transition: all .2s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #666;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #555;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #333;
+}
+
+/* LOADING SCREEN */
+
+#loading-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  z-index: 101;
+}
+
+/* NAVIGATION */
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 0 24px #0008;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 100;
+}
+
+nav>a {
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  height: 60px;
+  width: 100px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #8af2;
+  border: solid 3px #8af;
+  border-radius: 8px;
+  box-shadow: 0 0 8px #0004, inset 0 0 8px #0004;
+  margin: 12px 8px;
+  cursor: pointer;
+  transition: all .4s;
+}
+
+nav a div {
+  font-family: 'Titillium Web';
+  font-weight: 400;
+  text-transform: uppercase;
+  color: lightgray;
+  position: relative;
+  top: 20%;
+  transition: all .6s;
+}
+
+nav a:hover {
+  transform: scale(1.1);
+  background-color: #8af4;
+}
+
+nav a:hover div {
+  transform: scale(1.15);
+  text-shadow: 0 0 8px #fff8;
+  color: white;
+}
+
+/* CONTENT */
+
+.spacer {
+  height: 84px;
+}
+
+.container {
+  /* temporary */
+  height: 5000px;
+  margin: 30px auto;
+  width: 66.6vw;
+  background-color: #000c;
+  border-radius: 10px;
+  backdrop-filter: blur(8px);
+  /* box-shadow: 0 0 32px 12px black; */
+}
+
+h1 {
+  font-family: 'Titillium Web';
+  font-weight: 400;
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding-top: 20px;
+  padding-inline: 20px;
+  text-align: center;
+  text-shadow: 0 0 24px #8af8;
+  cursor: default;
+}
+
+p {
+  cursor: default;
+  border-radius: 8px;
+  margin: 20px;
+  padding: 20px;
+  background-color: #2236;
+  box-shadow:
+    0 0 12px #fff2,
+    inset 0 0 12px #0008;
+  border: solid 2px #fff4;
+}
