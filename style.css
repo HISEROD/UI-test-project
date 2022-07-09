@@ -150,12 +150,14 @@ p {
   cursor: default;
   border-radius: 8px;
   padding: 10px;
+  margin: 0;
   background-color: #1118;
 }
 
 img {
-  width: calc(100% / 3);
+  width: 100%;
   border-radius: 4px;
+  margin: 0;
 }
 
 /* GALLERY */
@@ -163,5 +165,11 @@ img {
 .photo-gallery {
   display: flex;
   overflow: hidden;
-  border: solid red 1px;
+}
+
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% / 3);
+  overflow: hidden;
 }
