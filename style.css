@@ -12,7 +12,7 @@
 
 ::selection {
   background-color: cyan;
-  color: #222;
+  color: #444;
 }
 
 body {
@@ -64,12 +64,14 @@ nav {
   display: flex;
   justify-content: center;
   box-shadow: 0 0 24px #0008;
+  background-color: #0003;
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   z-index: 100;
 }
 
 nav>a {
+  user-select: none;
   display: inline-block;
   font-size: 1.2rem;
   font-weight: bold;
@@ -77,7 +79,7 @@ nav>a {
   width: 100px;
   text-align: center;
   text-decoration: none;
-  background-color: #8af2;
+  background-color: #8af8;
   border: solid 3px #8af;
   border-radius: 8px;
   box-shadow: 0 0 8px #0004, inset 0 0 8px #0004;
@@ -107,7 +109,7 @@ nav a:hover div {
   color: white;
 }
 
-/* CONTENT */
+/* GENERAL STYLING */
 
 .spacer {
   height: 84px;
@@ -117,6 +119,7 @@ nav a:hover div {
   /* temporary */
   height: 5000px;
   margin: 30px auto;
+  padding: 20px;
   width: 66.6vw;
   background-color: #000c;
   border-radius: 10px;
@@ -124,10 +127,9 @@ nav a:hover div {
   /* box-shadow: 0 0 32px 12px black; */
 }
 
-h1 {
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Titillium Web';
   font-weight: 400;
-  font-size: 2rem;
   text-transform: uppercase;
   padding-top: 20px;
   padding-inline: 20px;
@@ -136,14 +138,30 @@ h1 {
   cursor: default;
 }
 
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
 p {
   cursor: default;
   border-radius: 8px;
-  margin: 20px;
-  padding: 20px;
-  background-color: #2236;
-  box-shadow:
-    0 0 12px #fff2,
-    inset 0 0 12px #0008;
-  border: solid 2px #fff4;
+  padding: 10px;
+  background-color: #1118;
+}
+
+img {
+  width: calc(100% / 3);
+  border-radius: 4px;
+}
+
+/* GALLERY */
+
+.photo-gallery {
+  display: flex;
+  overflow: hidden;
+  border: solid red 1px;
 }
