@@ -60,8 +60,8 @@ body {
 nav {
   position: fixed;
   top: 0;
-  width: 100%;
   display: flex;
+  width: 100%;
   justify-content: center;
   box-shadow: 0 0 24px #0008;
   background-color: #0003;
@@ -105,7 +105,7 @@ nav a:hover {
 
 nav a:hover div {
   transform: scale(1.15);
-  text-shadow: 0 0 8px #fff8;
+  text-shadow: 0 0 8px #fffc;
   color: white;
 }
 
@@ -131,8 +131,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Titillium Web';
   font-weight: 400;
   text-transform: uppercase;
-  padding-top: 20px;
-  padding-inline: 20px;
+  margin: 20px 10px;
   text-align: center;
   text-shadow: 0 0 24px #8af8;
   cursor: default;
@@ -164,12 +163,20 @@ img {
 
 .photo-gallery {
   display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
   overflow: hidden;
 }
 
 .gallery-item {
+  flex-basis: 50vh;
   display: flex;
   flex-direction: column;
   width: calc(100% / 3);
   overflow: hidden;
+  border-radius: 8px;
+}
+
+.gallery-item>img, .gallery-item>p {
+  border-radius: 0;
 }
